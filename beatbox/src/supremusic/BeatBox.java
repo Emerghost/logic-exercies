@@ -23,9 +23,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import com.sun.media.jfxmedia.events.MarkerEvent;
-
-public class BeatBox {
+public class BeatBox   {
 
 	private JPanel panel;
 	private ArrayList<JCheckBox> checkBoxList;
@@ -94,6 +92,7 @@ public class BeatBox {
 		for (int i = 0; i < 256; i++) {
 			JCheckBox chekBox = new JCheckBox();
 			chekBox.setSelected(false);
+		/*mudei*/	checkBoxList.add(chekBox);
 			panel.add(chekBox);
 		}
 
@@ -142,8 +141,9 @@ public class BeatBox {
 				} else {
 					trackList[j] = 0;
 				}
-
+				
 			}
+			
 			mekeTracks(trackList);
 			track.add(makeEvent(176, 1, 127, 0, 16));
 		}
@@ -219,6 +219,7 @@ public class BeatBox {
 			sequencer.setTempoFactor((float)(tempoFactor * 0.97));
 		}
 	}
+
 	
 	
 	
