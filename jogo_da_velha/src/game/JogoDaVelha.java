@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import java.awt.Font;
@@ -21,7 +22,6 @@ import javax.swing.SwingConstants;
 public class JogoDaVelha {
 
 	private JFrame frame;
-	private String lblBtn[];
 	private String lblBtn1;
 	private String lblBtn2;
 	private String lblBtn3;
@@ -36,7 +36,7 @@ public class JogoDaVelha {
 	private String jogadorDaVez = "X";
 	private JTextField xPontos;
 	private JTextField oPontos;
-	
+	ArrayList<String> lblBnt = new ArrayList();
 	
 	private String j;
 	private int i;
@@ -94,7 +94,7 @@ public class JogoDaVelha {
 				}
 				
 				escolherJogador();
-				lblBtn[1] = btn1.getText();
+				lblBtn1 = btn1.getText();
 				conferiJogo();
 			}
 		});
@@ -117,7 +117,7 @@ public class JogoDaVelha {
 				}
 				
 				escolherJogador();
-				lblBtn[2] = btn2.getText();
+				lblBtn2 = btn2.getText();
 				conferiJogo();
 				
 			}
@@ -142,7 +142,7 @@ public class JogoDaVelha {
 				}
 				
 				escolherJogador();
-				lblBtn[3] = btn3.getText();
+				lblBtn3 = btn3.getText();
 				conferiJogo();
 			}
 		});
@@ -190,7 +190,7 @@ public class JogoDaVelha {
 				}
 				
 				escolherJogador();
-				lblBtn[4] = btn4.getText();
+				lblBtn4 = btn4.getText();
 				conferiJogo();
 			}
 		});
@@ -214,7 +214,7 @@ public class JogoDaVelha {
 				}
 				
 				escolherJogador();
-				lblBtn[5] = btn5.getText();
+				lblBtn5 = btn5.getText();
 				conferiJogo();
 			}
 		});
@@ -238,7 +238,7 @@ public class JogoDaVelha {
 				}
 				
 				escolherJogador();
-				lblBtn[6] = btn6.getText();
+				lblBtn6 = btn6.getText();
 				conferiJogo();
 			}
 		});
@@ -285,7 +285,7 @@ public class JogoDaVelha {
 				}
 				
 				escolherJogador();
-				lblBtn[7] = btn7.getText();
+				lblBtn7 = btn7.getText();
 				conferiJogo();
 			}
 		});
@@ -309,7 +309,7 @@ public class JogoDaVelha {
 				}
 				
 				escolherJogador();
-				lblBtn[8] = btn8.getText();
+				lblBtn8 = btn8.getText();
 				conferiJogo();
 			}
 		});
@@ -333,7 +333,7 @@ public class JogoDaVelha {
 				}
 				
 				escolherJogador();
-				lblBtn[9] = btn9.getText();
+				lblBtn9 = btn9.getText();
 				conferiJogo();
 			}
 		});
@@ -389,12 +389,10 @@ public class JogoDaVelha {
 	}
 
 	protected void gameOver() {
-		for (int i = 1; i <= 9; i++) {
-			lblBtn[i] = "";
-		}
+			
 		
 		
-		/*lblBtn1 = "";
+		lblBtn1 = "";
 		lblBtn2 = "";
 		lblBtn3 = "";
 		lblBtn4 = "";
@@ -402,7 +400,7 @@ public class JogoDaVelha {
 		lblBtn6 = "";
 		lblBtn7 = "";
 		lblBtn8 = "";
-		lblBtn9 = "";*/
+		lblBtn9 = "";
 	}
 	
 	private void marcarPontos() {
@@ -419,13 +417,9 @@ public class JogoDaVelha {
 	}
 
 	private void conferiJogo() {
-		String[] b = null;
 		
-		for (int i = 0; i <= 9; i++) {
-			 b[i] = lblBtn[i];
-		}
 		
-		/*String b1 = lblBtn1 == null ? "" : lblBtn1;
+		String b1 = lblBtn1 == null ? "" : lblBtn1;
 		String b2 = lblBtn2 == null ? "" : lblBtn2;
 		String b3 = lblBtn3 == null ? "" : lblBtn3;
 		String b4 = lblBtn4 == null ? "" : lblBtn4;
@@ -433,7 +427,7 @@ public class JogoDaVelha {
 		String b6 = lblBtn6 == null ? "" : lblBtn6;
 		String b7 = lblBtn7 == null ? "" : lblBtn7;
 		String b8 = lblBtn8 == null ? "" : lblBtn8;
-		String b9 = lblBtn9 == null ? "" : lblBtn9;*/
+		String b9 = lblBtn9 == null ? "" : lblBtn9;
 		
 		if(jogadorDaVez == "O") {
 			j = "X";
@@ -443,7 +437,7 @@ public class JogoDaVelha {
 			i = 2;
 		}
 			
-		if(b[1].equalsIgnoreCase(j) && b[2].equalsIgnoreCase(j) && b[3].equalsIgnoreCase(j)) {
+		if(b1.equalsIgnoreCase(j) && b2.equalsIgnoreCase(j) && b3.equalsIgnoreCase(j)) {
 			JOptionPane.showMessageDialog(frame, "Player " + i +  " ganhou!", "Jogo da Velha", JOptionPane.INFORMATION_MESSAGE);
 			if(i == 1) {
 			xCount ++;
