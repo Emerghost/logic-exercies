@@ -1,6 +1,6 @@
-package interfaces;
+package java7.interfaces;
 
-import model.Cacos;
+import java7model.Cacos;
 
 public interface Quebravel {
 	Cacos quebrar();

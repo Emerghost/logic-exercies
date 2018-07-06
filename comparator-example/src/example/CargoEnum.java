@@ -2,16 +2,19 @@ package example;
 
 public enum CargoEnum {
 	GERENTE(1),
-	DESENVOLVEDOR(2);
+	ARQUITETO(2),
+	DESENVOLVEDOR(3),
+	ANALISTA_DE_TESTE(4);
 	
 	private Integer codigo;
 	
 	private CargoEnum(final Integer codigo) {
-		
+		this.codigo = codigo;
 	}
 	
 	public Integer getCodigo() {
 		return this.codigo;
 	}
+
 	
 }

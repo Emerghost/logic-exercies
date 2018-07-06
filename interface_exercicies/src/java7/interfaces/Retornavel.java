@@ -1,6 +1,6 @@
-package interfaces;
+package java7.interfaces;
 
-import model.Garrafa;
+import java7model.Garrafa;
 
 public interface Retornavel {
 	

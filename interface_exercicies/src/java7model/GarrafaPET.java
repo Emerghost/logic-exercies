@@ -1,6 +1,6 @@
-package model;
+package java7model;
 
-import interfaces.Retornavel;
+import java7.interfaces.Retornavel;
 
 public class GarrafaPET extends Garrafa implements Retornavel{
 

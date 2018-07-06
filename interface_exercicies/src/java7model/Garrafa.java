@@ -1,4 +1,4 @@
-package model;
+package java7model;
 
 public class Garrafa {
 
